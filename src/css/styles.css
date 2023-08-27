@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url("https://wallpaperaccess.com/full/20997.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  color: #ffff;
+  letter-spacing: 2px;
+}
+
+a {
+  font-family: "Roboto", "sans-serif";
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.left-content,
+.right-content {
+  flex-basis: 50%;
+}
+.left-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
+  grid-gap: 2rem;
+}
+
+.card:hover {
+  box-shadow: 0 5px 5px rgba(255, 255, 255, 255);
+}
+.card {
+  @apply bg-primaire;
+  cursor: pointer;
+  width: 300px;
+  border-radius: 25px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  flex-direction: column;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.right-content {
+  width: 50%;
+  text-align: center;
+  right: 10px;
+  display: flex;
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+}
+
+.loading {
+  font-size: 50px;
+}
+
+.right-content img {
+  margin: 50px;
+  height: 180px;
+}
+.abilities {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.base-stat {
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0.9;
+  background-color: aliceblue;
+  cursor: crosshair;
+}
+
+.base-stat h3 {
+  color: black;
+  letter-spacing: 5px;
+}
+
+.right-content h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.abilities .group {
+  white-space: nowrap;
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  font-style: 12px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.btn-group {
+  position: absolute;
+  bottom: -62em;
+}
+
+.btn-group button {
+  outline: none;
+  border: none;
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 50px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  border-radius: 8px;
+}
